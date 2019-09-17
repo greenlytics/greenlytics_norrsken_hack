@@ -42,6 +42,13 @@ class StyledSlider extends Component {
   }
 
 
+  /*onSliderChange = (value) => {
+    console.log("mov");
+    console.log(value);
+    console.log(this.props.nrTicks);
+    this.props.update(value);
+  }
+  */
 
   onSliderChange = (val) => {
     if (this.props.disabled){

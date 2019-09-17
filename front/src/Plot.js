@@ -21,15 +21,17 @@ class StyledPlot extends React.Component {
 
   render(){
     return (
-      <Plot
-        data={this.constructData(this.props.data)}
-        layout={ {width: '100%', height: '100%', title: this.props.title} }
-        config={{
-          displayModeBar: false,
-          staticPlot: this.props.staticPlot,
-          responsive: true,
-        }}
-      />
+      <div style={{height: '100%', width: '100%', ...this.props.style}}>
+        <Plot
+          data={this.constructData(this.props.data)}
+          layout={ {width: '100%', height: '100%', title: this.props.title} }
+          config={{
+            displayModeBar: false,
+            staticPlot: this.props.staticPlot,
+            responsive: true,
+          }}
+        />
+      </div>
     )
   }
 
